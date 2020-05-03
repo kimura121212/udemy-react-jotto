@@ -4,6 +4,9 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom/extend-expect';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
-import Enzyme from 'enzyme';
+import Enzyme,{shallow} from 'enzyme';
 
-Enzyme.configure({adapter: new EnzymeAdapter()});
+Enzyme.configure({
+    adapter: new EnzymeAdapter(),
+    disableLifecycleMethods: true,
+});
